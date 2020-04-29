@@ -28,9 +28,9 @@ jobs:
         repository: test-sakura-editor/sakura
         path: sakura
 
-    - name: Checkout test-sakura-editor.github.io repo
-      uses: actions/checkout@v2
+    - name: Doxygen Build
+      uses: mattnotmitt/doxygen-action@v1
       with:
-        repository: test-sakura-editor/test-sakura-editor.github.io
-        path: test-sakura-editor.github.io
+          working-directory: '.'
+          doxyfile-path: './sakura/doxygen.conf'
 
