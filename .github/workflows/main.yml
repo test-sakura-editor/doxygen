@@ -28,6 +28,12 @@ jobs:
         repository: test-sakura-editor/sakura
         path: sakura
 
+    - name: Checkout test-sakura-editor.github.io repo
+      uses: actions/checkout@v2
+      with:
+        repository: test-sakura-editor/test-sakura-editor.github.io
+        path: test-sakura-editor.github.io
+
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo Hello, world!
