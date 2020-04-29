@@ -27,8 +27,10 @@ jobs:
     - name: Checkout sakura repo
       uses: actions/checkout@v2
       with:
-        repository: ${{ GITHUB_ACTOR }}/sakura
+        repository: $GITHUB_ACTOR/sakura
         path: sakura
+      env:
+         GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
 
     - name: Doxygen Build
       uses: mattnotmitt/doxygen-action@v1
