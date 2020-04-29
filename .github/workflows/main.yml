@@ -31,12 +31,12 @@ jobs:
     - name: Doxygen Build
       uses: mattnotmitt/doxygen-action@v1
       with:
-          working-directory: '.'
+          working-directory: './sakura'
           doxyfile-path: './sakura/doxygen.conf'
 
     - name: Deploy doxygen
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./html
+        publish_dir: ./sakura/html
 
