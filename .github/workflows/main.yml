@@ -37,8 +37,9 @@ jobs:
           doxyfile-path: './doxygen.conf'
 
     - name: Deploy doxygen
-      uses: peaceiris/actions-gh-pages@v3
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./sakura/html
-
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: ./sakura/html # The folder the action should deploy.
+          TARGET_FOLDER: master
