@@ -32,7 +32,7 @@ jobs:
       uses: mattnotmitt/doxygen-action@v1
       with:
           working-directory: './sakura'
-          doxyfile-path: './sakura/doxygen.conf'
+          doxyfile-path: './doxygen.conf'
 
     - name: Deploy doxygen
       uses: peaceiris/actions-gh-pages@v3
