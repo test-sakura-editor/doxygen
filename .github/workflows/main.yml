@@ -34,3 +34,9 @@ jobs:
           working-directory: '.'
           doxyfile-path: './sakura/doxygen.conf'
 
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./sakura/html
+
