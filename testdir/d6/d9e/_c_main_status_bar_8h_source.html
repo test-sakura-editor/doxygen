@@ -73,42 +73,39 @@ $(function() {
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/db0/_c_doc_listener_8h.html">doc/CDocListener.h</a>&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d1/dd2/class_c_main_status_bar.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/dd2/class_c_main_status_bar.html">CMainStatusBar</a> : <span class="keyword">public</span> <a class="code" href="../../d6/de5/class_c_doc_listener_ex.html">CDocListenerEx</a>{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//作成・破棄</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../d1/dd2/class_c_main_status_bar.html">CMainStatusBar</a>(<a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>* pOwner);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> CreateStatusBar();     <span class="comment">// ステータスバー作成</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> DestroyStatusBar();        <span class="comment">/* ステータスバー破棄 */</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/dd2/class_c_main_status_bar.html#ac6da0f4d7f05ac7b73f5db6e89c7d180">SendStatusMessage2</a>( <span class="keyword">const</span> WCHAR* msg );    <span class="comment">//  Jul. 9, 2005 genta メニューバー右端には出したくない長めのメッセージを出す</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d1/dd2/class_c_main_status_bar.html#a17d65bc0c70957adf2c10de1791863ca">   47</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="../../d1/dd2/class_c_main_status_bar.html#a17d65bc0c70957adf2c10de1791863ca">SendStatusMessage2IsEffective</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> NULL != m_hwndStatusBar;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">//取得</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    HWND GetStatusHwnd()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_hwndStatusBar; }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    HWND GetProgressHwnd()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_hwndProgressBar; }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">//設定</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/dd2/class_c_main_status_bar.html#af8fcd0204833cf31b74ddfd802060f08">SetStatusText</a>(<span class="keywordtype">int</span> nIndex, <span class="keywordtype">int</span> nOption, <span class="keyword">const</span> WCHAR* pszText, <span class="keywordtype">size_t</span> textLen = SIZE_MAX, <span class="keywordtype">bool</span> bSendMessage = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>*   m_pOwner;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    HWND        m_hwndStatusBar;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    HWND        m_hwndProgressBar;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::array&lt;std::unique_ptr&lt;wchar_t[]&gt;, 7&gt; m_postponeBuffers;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d1/dd2/class_c_main_status_bar.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/dd2/class_c_main_status_bar.html">CMainStatusBar</a> : <span class="keyword">public</span> <a class="code" href="../../d6/de5/class_c_doc_listener_ex.html">CDocListenerEx</a>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//作成・破棄</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../d1/dd2/class_c_main_status_bar.html">CMainStatusBar</a>(<a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>* pOwner);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> CreateStatusBar();     <span class="comment">// ステータスバー作成</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> DestroyStatusBar();        <span class="comment">/* ステータスバー破棄 */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/dd2/class_c_main_status_bar.html#ac6da0f4d7f05ac7b73f5db6e89c7d180">SendStatusMessage2</a>( <span class="keyword">const</span> WCHAR* msg );    <span class="comment">//  Jul. 9, 2005 genta メニューバー右端には出したくない長めのメッセージを出す</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d1/dd2/class_c_main_status_bar.html#a17d65bc0c70957adf2c10de1791863ca">   45</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="../../d1/dd2/class_c_main_status_bar.html#a17d65bc0c70957adf2c10de1791863ca">SendStatusMessage2IsEffective</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> NULL != m_hwndStatusBar;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//取得</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    HWND GetStatusHwnd()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_hwndStatusBar; }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    HWND GetProgressHwnd()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> m_hwndProgressBar; }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//設定</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/dd2/class_c_main_status_bar.html#ad2e0be17dd1de5d162aff64c7c0a576c">SetStatusText</a>(<span class="keywordtype">int</span> nIndex, <span class="keywordtype">int</span> nOption, <span class="keyword">const</span> WCHAR* pszText, <span class="keywordtype">size_t</span> textLen = SIZE_MAX);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a>*   m_pOwner;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    HWND        m_hwndStatusBar;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    HWND        m_hwndProgressBar;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_c_edit_wnd_html"><div class="ttname"><a href="../../d2/d89/class_c_edit_wnd.html">CEditWnd</a></div><div class="ttdoc">編集ウィンドウ（外枠）管理クラス</div><div class="ttdef"><b>Definition:</b> CEditWnd.h:97</div></div>
-<div class="ttc" id="aclass_c_main_status_bar_html_a17d65bc0c70957adf2c10de1791863ca"><div class="ttname"><a href="../../d1/dd2/class_c_main_status_bar.html#a17d65bc0c70957adf2c10de1791863ca">CMainStatusBar::SendStatusMessage2IsEffective</a></div><div class="ttdeci">bool SendStatusMessage2IsEffective() const</div><div class="ttdef"><b>Definition:</b> CMainStatusBar.h:47</div></div>
+<div class="ttc" id="aclass_c_main_status_bar_html_a17d65bc0c70957adf2c10de1791863ca"><div class="ttname"><a href="../../d1/dd2/class_c_main_status_bar.html#a17d65bc0c70957adf2c10de1791863ca">CMainStatusBar::SendStatusMessage2IsEffective</a></div><div class="ttdeci">bool SendStatusMessage2IsEffective() const</div><div class="ttdef"><b>Definition:</b> CMainStatusBar.h:45</div></div>
+<div class="ttc" id="aclass_c_main_status_bar_html_ad2e0be17dd1de5d162aff64c7c0a576c"><div class="ttname"><a href="../../d1/dd2/class_c_main_status_bar.html#ad2e0be17dd1de5d162aff64c7c0a576c">CMainStatusBar::SetStatusText</a></div><div class="ttdeci">void SetStatusText(int nIndex, int nOption, const WCHAR *pszText, size_t textLen=SIZE_MAX)</div><div class="ttdoc">文字列をステータスバーの指定されたパートに表示する</div><div class="ttdef"><b>Definition:</b> CMainStatusBar.cpp:110</div></div>
 <div class="ttc" id="aclass_c_doc_listener_ex_html"><div class="ttname"><a href="../../d6/de5/class_c_doc_listener_ex.html">CDocListenerEx</a></div><div class="ttdef"><b>Definition:</b> CDocListener.h:203</div></div>
 <div class="ttc" id="aclass_c_main_status_bar_html_ac6da0f4d7f05ac7b73f5db6e89c7d180"><div class="ttname"><a href="../../d1/dd2/class_c_main_status_bar.html#ac6da0f4d7f05ac7b73f5db6e89c7d180">CMainStatusBar::SendStatusMessage2</a></div><div class="ttdeci">void SendStatusMessage2(const WCHAR *msg)</div><div class="ttdoc">メッセージの表示</div><div class="ttdef"><b>Definition:</b> CMainStatusBar.cpp:95</div></div>
-<div class="ttc" id="aclass_c_main_status_bar_html_af8fcd0204833cf31b74ddfd802060f08"><div class="ttname"><a href="../../d1/dd2/class_c_main_status_bar.html#af8fcd0204833cf31b74ddfd802060f08">CMainStatusBar::SetStatusText</a></div><div class="ttdeci">void SetStatusText(int nIndex, int nOption, const WCHAR *pszText, size_t textLen=SIZE_MAX, bool bSendMessage=true)</div><div class="ttdoc">文字列をステータスバーの指定されたパートに表示する</div><div class="ttdef"><b>Definition:</b> CMainStatusBar.cpp:110</div></div>
-<div class="ttc" id="aclass_c_main_status_bar_html"><div class="ttname"><a href="../../d1/dd2/class_c_main_status_bar.html">CMainStatusBar</a></div><div class="ttdef"><b>Definition:</b> CMainStatusBar.h:33</div></div>
+<div class="ttc" id="aclass_c_main_status_bar_html"><div class="ttname"><a href="../../d1/dd2/class_c_main_status_bar.html">CMainStatusBar</a></div><div class="ttdef"><b>Definition:</b> CMainStatusBar.h:31</div></div>
 <div class="ttc" id="a_c_doc_listener_8h_html"><div class="ttname"><a href="../../d3/db0/_c_doc_listener_8h.html">CDocListener.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

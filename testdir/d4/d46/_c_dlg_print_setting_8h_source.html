@@ -106,7 +106,7 @@ $(function() {
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> GetData( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;   <span class="comment">/* ダイアログデータの取得 */</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    BOOL OnInitDialog(HWND hwndDlg, WPARAM wParam, LPARAM lParam) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    BOOL OnDestroy( <span class="keywordtype">void</span> ) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    BOOL OnNotify(WPARAM wParam, LPARAM lParam) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    BOOL OnNotify(NMHDR* pNMHDR) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    BOOL OnCbnSelChange(HWND hwndCtl, <span class="keywordtype">int</span> wID) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    BOOL OnBnClicked(<span class="keywordtype">int</span> wID) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    BOOL OnStnClicked(<span class="keywordtype">int</span> wID) <span class="keyword">override</span>;</div>
