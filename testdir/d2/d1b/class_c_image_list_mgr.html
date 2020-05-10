@@ -90,10 +90,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="separator:ae187c7eab270d6171bfd26059b94830b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba4a92ebf773719bdb099f0d8c31f50d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1b/class_c_image_list_mgr.html#aba4a92ebf773719bdb099f0d8c31f50d">MyDitherBlt</a> (HDC drawdc, int nXDest, int nYDest, int nWidth, int nHeight, int nXSrc, int nYSrc) const</td></tr>
 <tr class="separator:aba4a92ebf773719bdb099f0d8c31f50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac03d151dfbfc8752c28089ec00753679"><td class="memItemLeft" align="right" valign="top"><a id="ac03d151dfbfc8752c28089ec00753679"></a>
-HBITMAP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1b/class_c_image_list_mgr.html#ac03d151dfbfc8752c28089ec00753679">ResizeToolIcons</a> (HDC hDC, HBITMAP &amp;hRscbmp, int cols, int rows) const noexcept</td></tr>
-<tr class="memdesc:ac03d151dfbfc8752c28089ec00753679"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップを一行拡張する <br /></td></tr>
-<tr class="separator:ac03d151dfbfc8752c28089ec00753679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a344d3d788b31d0cb1c414f196416d61c"><td class="memItemLeft" align="right" valign="top">HBITMAP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1b/class_c_image_list_mgr.html#a344d3d788b31d0cb1c414f196416d61c">ResizeToolIcons</a> (HBITMAP hRscbmp, COLORREF &amp;clrTransparent) const noexcept</td></tr>
+<tr class="memdesc:a344d3d788b31d0cb1c414f196416d61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ツールイメージをリサイズする  <a href="../../d2/d1b/class_c_image_list_mgr.html#a344d3d788b31d0cb1c414f196416d61c">[詳解]</a><br /></td></tr>
+<tr class="separator:a344d3d788b31d0cb1c414f196416d61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d2b98333731bfec719ffd6fa9677d88"><td class="memItemLeft" align="right" valign="top"><a id="a5d2b98333731bfec719ffd6fa9677d88"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1b/class_c_image_list_mgr.html#a5d2b98333731bfec719ffd6fa9677d88">Extend</a> (bool=true)</td></tr>
 <tr class="memdesc:a5d2b98333731bfec719ffd6fa9677d88"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビットマップを一行拡張する <br /></td></tr>
@@ -423,6 +422,51 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <dl class="section date"><dt>日付</dt><dd>2003.07.21 genta 以前のCMenuDrawerより移転復活 </dd>
 <dd>
 2003.08.27 Moca 背景色は透過処理する </dd></dl>
+
+</div>
+</div>
+<a id="a344d3d788b31d0cb1c414f196416d61c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a344d3d788b31d0cb1c414f196416d61c">&#9670;&nbsp;</a></span>ResizeToolIcons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HBITMAP CImageListMgr::ResizeToolIcons </td>
+          <td>(</td>
+          <td class="paramtype">HBITMAP&#160;</td>
+          <td class="paramname"><em>bmpSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">COLORREF &amp;&#160;</td>
+          <td class="paramname"><em>clrTransparent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ツールイメージをリサイズする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bmpSrc</td><td>[in] 変換前Bmpのハンドル </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">clrTransparent</td><td>[out] 透過色 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
